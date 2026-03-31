@@ -52,5 +52,5 @@ A **Set** consists of **three cards** where, for *each attribute*, the values ar
 
 ### Clone the Repository!
 ```bash
-git clone https://github.com/ntran685/set-web-game.git
-cd set-web-game
+git clone https://github.com/nathanttran685/Set-Game.git
+cd Set-Game
