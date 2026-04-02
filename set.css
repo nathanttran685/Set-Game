@@ -1,13 +1,14 @@
 /*
- *Nathan Tran
- *set.css
- *This style file implements the overall aesthetics, color schemes, and fonts
+  DARK MODE VERSION OF SET.CSS (FOR PRACTICE / LOCAL USE ONLY)
  */
 
 body, button, select, input {
   font-family: "Helvetica", "Verdana", sans-serif;
   text-align: center;
   font-size: 12pt;
+
+  background-color: #0f1220;
+  color: #e8e8e8;
 }
 
 main {
@@ -15,32 +16,65 @@ main {
   margin: auto;
 }
 
-button, select {
-  padding: 8px;
-  background-color: white;
-  border: 2pt solid black;
+.title {
+  width: 600px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
+/* =========================
+   BUTTONS
+========================= */
+button, select {
+  padding: 8px;
+  background-color: #1f2338;
+  color: white;
+  border: 2pt solid #5b6cff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(91,108,255,0.6);
+}
+
+/* =========================
+   HEADERS
+========================= */
 h2 {
   text-decoration: underline;
+  color: #ffffff;
 }
 
 #start-btn {
   width: 100px;
   margin-top: 10px;
   margin-bottom: 20px;
-}
-
-#menu-view > article {
-  background-color: #6F77ED;
-  border-radius: 0.35em;
-  border: 5pt solid black;
-}
-
-#menu-view > article, #details-bar {
+  background-color: #2a2f4a;
+  border: 2px solid #5b6cff;
   color: white;
 }
 
+/* =========================
+   MENU
+========================= */
+#menu-view > article {
+  background-color: #2b2f55;
+  border-radius: 0.35em;
+  border: 5pt solid #5b6cff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+#menu-view > article,
+#details-bar {
+  color: white;
+}
+
+/* =========================
+   LAYOUT
+========================= */
 .card, #details-bar, #board {
   display: flex;
   justify-content: space-evenly;
@@ -50,21 +84,44 @@ h2 {
   align-items: center;
 }
 
+/* =========================
+   TOP BAR
+========================= */
 #details-bar {
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
-  background-color: black;
+  border-top: 5pt solid #5b6cff;
+  border-left: 5pt solid #5b6cff;
+  border-right: 5pt solid #5b6cff;
+  background-color: #11131f;
   font-size: 14pt;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
 }
 
+/* =========================
+   CARDS
+========================= */
 .card {
   width: 220px;
   height: 95px;
-  border: 0.35em solid black;
+
+  border: 0.35em solid #5b6cff;
   border-radius: 1em;
+
+  background-color: white;
+  color: white;
+
   cursor: pointer;
+
   margin-top: 5px;
   margin-bottom: 5px;
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px rgba(91,108,255,0.5);
 }
 
 .card img {
@@ -73,24 +130,43 @@ h2 {
 
 .card p {
   font-weight: bold;
+  color: #e8e8e8;
 }
 
+/* =========================
+   TEXT
+========================= */
 h2, .card p {
   font-size: 16pt;
 }
 
+/* =========================
+   SELECTED CARD
+========================= */
 .selected {
-  box-shadow: #636363 6px 6px;
+  box-shadow: 0 0 15px #5b6cff;
+  transform: translateY(-2px);
 }
 
+/* =========================
+   BOARD
+========================= */
 #board {
-  border-right: black solid 5pt;
-  border-left: black solid 5pt;
-  border-bottom: black solid 5pt;
+  border-right: 5pt solid #5b6cff;
+  border-left: 5pt solid #5b6cff;
+  border-bottom: 5pt solid #5b6cff;
+
+
   padding: 20px;
   flex-wrap: wrap;
+
+  background-color: #0f1220;
 }
 
-.hidden, .hide-imgs > img {
+/* =========================
+   HIDDEN
+========================= */
+.hidden,
+.hide-imgs > img {
   display: none;
 }
